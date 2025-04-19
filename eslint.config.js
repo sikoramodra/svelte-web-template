@@ -25,12 +25,12 @@ export default ts.config(
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
     },
+  },
+  {
     plugins: { 'simple-import-sort': simpleImportSort },
-    rules: { 'no-undef': 'off' },
   },
   {
     files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
-    plugins: { 'simple-import-sort': simpleImportSort },
     languageOptions: {
       parserOptions: {
         projectService: true,
