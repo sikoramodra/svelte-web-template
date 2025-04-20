@@ -1,0 +1,23 @@
+/** @type {import("prettier").Config} */
+export default {
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: 'consistent',
+  trailingComma: 'all',
+  bracketSpacing: true,
+  objectWrap: 'preserve',
+  bracketSameLine: false,
+  arrowParens: 'always',
+  plugins: ['prettier-plugin-svelte', 'prettier-plugin-tailwindcss'],
+  overrides: [
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
+      },
+    },
+  ],
+};
