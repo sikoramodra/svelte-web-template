@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --color-dark: #282c34;
+  --color-darker: #21252b;
+  --color-muted: #abb2bf;
+}
