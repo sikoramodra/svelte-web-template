@@ -4,6 +4,7 @@ import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import * as pluginImportX from 'eslint-plugin-import-x';
+import prettierPlugin from 'eslint-plugin-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
@@ -24,9 +25,10 @@ export default ts.config(
   pluginImportX.flatConfigs.recommended,
   pluginImportX.flatConfigs.typescript,
   {
-    plugins: { 'simple-import-sort': simpleImportSort },
-  },
-  {
+    plugins: {
+      'prettier': prettierPlugin,
+      'simple-import-sort': simpleImportSort,
+    },
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
     },
